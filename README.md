@@ -16,6 +16,7 @@ Front Działnie:
     -panel 2 wyświetla wszystkie nasze posty w zgrabnej formie, z możliwością usunięcia oraz edytowania 
     które przenosi nas do osobnego widoku edycji
     -dane o użytkownikach (imię, nazwisko, mail itd) !(Soon, po zrobieniu logowania)
+    -filtrowanie danych (Soon)
 
 #4 Formularz dodawania:
     -formularz składa się z pól (title, img, ingredients, text)
