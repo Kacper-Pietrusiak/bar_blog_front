@@ -1,16 +1,20 @@
-import {Box} from '@mui/material';
+import {Box, Switch, Typography} from '@mui/material';
 import React from 'react';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
-import CastleIcon from '@mui/icons-material/Castle';
+import PersonIcon from '@mui/icons-material/Person';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import { NavLink} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {changeMode} from "../../redux/themeSlice";
 
 const Navigation = () => {
 
+    const dispatch = useDispatch();
+
     const links = [
         {path: 'drinks', icon: <LocalBarIcon sx={{fontSize: '50px', color: 'secondary.main'}}/> },
-        {path: 'history', icon: <CastleIcon sx={{fontSize: '50px', color: 'secondary.main'}}/> },
-        {path: 'add', icon: <PostAddIcon sx={{fontSize: '50px', color: 'secondary.main'}}/> }
+        {path: 'admin/account', icon: <PersonIcon sx={{fontSize: '50px', color: 'secondary.main'}}/> },
+        {path: 'drinks/add', icon: <PostAddIcon sx={{fontSize: '50px', color: 'secondary.main'}}/> }
     ]
 
     let liStyle = {
@@ -19,9 +23,18 @@ const Navigation = () => {
 
     };
 
+    const handleChange = () => {
+        dispatch(changeMode())
+    }
+
 
     return (
-        <Box sx={{ width: '100%', boxSizing:"border-box", bgcolor: 'primary.main'}}>
+        <Box sx={{ width: '100%', boxSizing:"border-box", bgcolor: 'primary.main', position: 'relative'}}>
+            <Box sx={{position: "absolute", top: '10px', left: '10px'}}>
+                <Typography color={'text.primary'}>Change Mode</Typography>
+                <Switch onClick={handleChange}/>
+            </Box>
+
             <nav>
                 <ul style={{display: 'flex', height: '100px', listStyle: 'none', justifyContent: 'end', alignItems: "center"}}>
                     {links.map(link => (

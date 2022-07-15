@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+Front Działnie: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#1: Pasek menu: 
+    -pierwsza ikona: wyświetla wszystkie drinki jakie są 
+    -druga ikona: przechodzi do 'Panelu admina'
+    -trzecia ikona: dodawanie postu
+    -lewy górny róg zmiana 'trybu' na jasny/ciemny (Nie jestem artysta ok, nie mam zmysłu artystycznego :)) 
 
-## Available Scripts
+#2 Lista wszystkich drinków: 
+    -wszystkie 'karty' są klikalne
+    -po kliknięciu przenosi nas widoku pojedynczego Drinka na którego kliknęliśmy
+    -z widoku pojedynczego drinka można cofnąć do wszystkich po kliknięciu 'GO BACK
+    
+#3 Admin Panel: 
+    -dane o adminie (imię, nazwisko, mail itd) !(Soon, po zrobieniu logowania)
+    -panel 2 wyświetla wszystkie nasze posty w zgrabnej formie, z możliwością usunięcia oraz edytowania 
+    które przenosi nas do osobnego widoku edycji
+    -dane o użytkownikach (imię, nazwisko, mail itd) !(Soon, po zrobieniu logowania)
 
-In the project directory, you can run:
+#4 Formularz dodawania:
+    -formularz składa się z pól (title, img, ingredients, text)
+    -na chwile obecną nie ma serwera i nie ma gdzie wrzucać więc zdjęć, chwilowe rozwiązanie to wpisanie jednej z fraz;
+    [aperol_spritz.png, blue_lagoon.png, mai_tai.png, margarita.png, mohito.png, tequilla_sunrise.png, wodka_sour.png]
+    -składniki wrzucać w formie stringa po przecinku (np. "woda, karmel, pieprz")
 
-### `npm start`
+Backend: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#1 Metody: 
+    -getOne: znalezienie konkretnego postu
+    -getAll: znalezienie wszystkich postów
+    -inser: dodawanie postu
+    -delete: usuwanie postu
+    -edit: edycja postu
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#Routery:
+    -PostRouter: obsługa postów w panelu głownym
+    -AdminRouter: obsługa akcji w Admin Panelu
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+SOON!!!!!!!!!!!!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#1 Logowanie
+#2 Ocena Drinków przez użytkowników
+#3 Próba zadowolenia Jakuba Króla :) !!!!!!!!!!!!!!
